@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hacer ejercicio",
+    "estado-completado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Arreglarme para trabajar",
+    "estado-completado": false
+  },
+  {
+    "id": 3,
+    "nombre": "Enviar mail al cliente ABC",
+    "estado-completado": true
+  },
+  {
+    "id": 4,
+    "nombre": "Terminar Estados Financieros",
+    "estado-completado": true
+  }
+]

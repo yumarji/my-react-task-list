@@ -1,0 +1,58 @@
+.box {
+  border: 1px solid rgb(23, 13, 74);
+  padding: 10px;
+  border-radius: 3%;
+  position: relative;
+  align-content: center;
+  width: 250px;
+  margin-left: 5px;
+}
+
+.buttonAdd {
+  background-color: rgba(8, 25, 54, 0.795);
+  border: none;
+  color: azure;
+  font-size: 10px;
+  height: 32px;
+  width: 40px;
+  margin-left: 4px;
+}
+
+.Lista {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(214, 213, 213);
+  border-radius: 5px;
+  padding: 4px;
+  margin-left: 1px;
+  margin-bottom: 10px;
+  font-size: small;
+}
+
+.icono1 {
+  color: rgba(8, 25, 54, 0.795);
+  padding: 3px;
+}
+
+.icono2 {
+  color: rgb(169, 61, 61);
+  padding: 3px;
+}
+
+.input {
+  width: 230px;
+}
+
+.add {
+  height: 25px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid rgb(53, 52, 52);
+  margin-bottom: 20px;
+}
+
+.finished {
+  text-decoration: line-through;
+}

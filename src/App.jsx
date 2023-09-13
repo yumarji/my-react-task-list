@@ -1,24 +1,22 @@
+import "./App.css";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
-import "./App.css";
 
-const todoList = [
-  { thing: "Lavar los platos" },
-  { thing: "Lavar los dientes" },
-  { thing: "Planchar la ropa" },
+const toDoList = [
+  { id: 1, name: "Lavar la ropa", completed: true },
+  { id: 2, name: "Hacer mercado", completed: false },
+  { id: 3, name: "Pagar facturas", completed: true },
 ];
 
 function App() {
   return (
-    <div className="box">
+    <div className="mainBox">
       <Header />
-
-      <div className="input">
-        <input className="add" placeholder="Add to do" />
-        <button className="buttonAdd">+</button>
-      </div>
-
-      <TaskList list={todoList} />
+      <TaskList list={toDoList} />
+      <span className="finalBox">
+        <p className="finalText">You have 2 pending task</p>
+        <button className="buttonClear">Clear All</button>
+      </span>
     </div>
   );
 }

@@ -1,11 +1,11 @@
-.box {
+.mainBox {
   border: 1px solid rgb(23, 13, 74);
-  padding: 10px;
+  padding: 20px;
   border-radius: 3%;
   position: relative;
   align-content: center;
-  width: 250px;
-  margin-left: 5px;
+  width: auto;
+  margin-left: 0px;
 }
 
 .buttonAdd {
@@ -15,44 +15,75 @@
   font-size: 10px;
   height: 32px;
   width: 40px;
-  margin-left: 4px;
-}
-
-.Lista {
-  width: 230px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(214, 213, 213);
-  border-radius: 5px;
-  padding: 4px;
   margin-left: 1px;
-  margin-bottom: 10px;
-  font-size: small;
-}
-
-.icono1 {
-  color: rgba(8, 25, 54, 0.795);
-  padding: 3px;
-}
-
-.icono2 {
-  color: rgb(169, 61, 61);
-  padding: 3px;
 }
 
 .input {
   width: 230px;
 }
 
-.add {
-  height: 25px;
-  width: 180px;
-  border-radius: 5px;
-  border: 1px solid rgb(53, 52, 52);
-  margin-bottom: 20px;
+.input-radio {
+  width: 15px;
+}
+
+.iconAdd {
+  color: rgba(2, 19, 117, 0.959);
 }
 
 .finished {
   text-decoration: line-through;
+}
+
+.head {
+  width: 230px;
+  margin-left: 40px;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxTask {
+  width: 300px;
+  display: flex;
+  background: grey;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(214, 213, 213);
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.icon1 {
+  color: rgba(17, 100, 243, 0.904);
+  padding: 3px;
+}
+
+.icon2 {
+  color: rgb(236, 70, 70);
+  padding: 3px;
+}
+
+.finalText {
+  font-size: 10px;
+}
+
+.finalBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonClear {
+  color: rgb(254, 254, 254);
+  background-color: brown;
+  width: auto;
+  height: fit-content;
+  font-size: 10px;
+}
+
+.inputNew {
+  border-radius: 4px;
+  margin-left: 40px;
+  width: 200px;
+  height: 20px;
 }

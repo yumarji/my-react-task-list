@@ -1,89 +1,139 @@
 .mainBox {
-  border: 1px solid rgb(23, 13, 74);
-  padding: 20px;
-  border-radius: 3%;
+  border: 4px solid rgba(1, 1, 20, 0.822);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
   position: relative;
-  align-content: center;
-  width: auto;
-  margin-left: 0px;
+  width: 550px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 29rem;
+}
+
+.form2 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.inputNew {
+  border-radius: 4px;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  background-color: #dbd7d7;
+  border-color: #c6c5c5;
+  color: black;
 }
 
 .buttonAdd {
-  background-color: rgba(8, 25, 54, 0.795);
+  display: flex;
+  align-items: center;
+  background-color: rgba(5, 56, 143, 0.795);
   border: none;
-  color: azure;
-  font-size: 10px;
-  height: 32px;
-  width: 40px;
-  margin-left: 1px;
-}
-
-.input {
-  width: 230px;
-}
-
-.input-radio {
-  width: 15px;
+  margin-left: 2rem;
+  color: rgb(242, 242, 245);
+  font-size: 15px;
+  height: 37px;
+  width: 60px;
 }
 
 .iconAdd {
   color: rgba(2, 19, 117, 0.959);
 }
 
-.finished {
-  text-decoration: line-through;
-}
-
 .head {
-  width: 230px;
-  margin-left: 40px;
-  padding: 2px;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 2.3rem;
+  font-weight: bold;
 }
 
 .boxTask {
-  width: 300px;
+  width: 440px;
   display: flex;
   background: grey;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(214, 213, 213);
+  background-color: rgb(202, 208, 227);
   border-radius: 5px;
-  padding: 2px;
   margin-bottom: 10px;
 }
 
-.icon1 {
-  color: rgba(17, 100, 243, 0.904);
-  padding: 3px;
-}
-
-.icon2 {
-  color: rgb(236, 70, 70);
-  padding: 3px;
-}
-
-.finalText {
-  font-size: 10px;
-}
-
-.finalBox {
+.taskCompleted {
+  text-decoration: line-through;
+  width: 442px;
   display: flex;
-  justify-content: space-evenly;
+  background: grey;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 208, 227);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-edit {
+  color: rgba(17, 100, 243, 0.904);
+  font-size: 1.3rem;
+}
+
+.btn-delete {
+  color: rgb(207, 27, 27);
+  font-size: 1.3rem;
+}
+
+.btn-save {
+  color: rgb(8, 10, 8);
+  font-size: 1.3rem;
+}
+
+.btn-task {
+  background-color: rgb(202, 208, 227);
+}
+
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  font-size: 10px;
+  width: 350px;
+  justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 .buttonClear {
+  display: flex;
+  align-items: center;
   color: rgb(254, 254, 254);
   background-color: brown;
-  width: auto;
-  height: fit-content;
-  font-size: 10px;
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1rem;
 }
 
-.inputNew {
-  border-radius: 4px;
-  margin-left: 40px;
-  width: 200px;
-  height: 20px;
+span.error {
+  display: block;
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+span.edit {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+form > div {
+  margin-bottom: 0.5rem;
+}
+
+button:disabled {
+  background-color: #858282;
+}
+
+.inputEdit {
+  border-radius: 5px;
 }

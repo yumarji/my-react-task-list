@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Tarea 1",
+    "description": "Lavar la ropa de Juliana",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "name": "Tarea 2",
+    "description": "Comprar frutas y verduras",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "name": "Tarea 3",
+    "description": "Pagar agua y luz",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "name": "Tarea 4",
+    "description": "Entregables de React",
+    "completed": false
+  }
+]

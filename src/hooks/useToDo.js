@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { localStorageData } from "../localStorageData";
 import swal from "sweetalert";
+import { v4 as uuid } from "uuid";
 
 export function useToDo() {
   const [list, setList] = useState([]);
-
   const pendingToDo = list.filter((task) => !task.completed).length;
+  const completedToDo = list.filter((task) => task.completed).length;
 
   //Función para agregar una tarea
   const addTask = (taskName, taskDescription) => {
     let newItem = {
-      id: +new Date(),
+      id: uuid(),
       name: taskName,
       description: taskDescription,
       completed: false,
@@ -22,6 +23,7 @@ export function useToDo() {
       button: "ok",
       timer: 3000,
     });
+
     setList([...list, newItem]);
   };
 
@@ -59,7 +61,7 @@ export function useToDo() {
   const onCompleted = (id) => {
     setList(
       list.map((task) => {
-        return task.id === Number(id)
+        return task.id === id
           ? { ...task, completed: !task.completed }
           : { ...task };
       })
@@ -97,6 +99,7 @@ export function useToDo() {
   return {
     list,
     pendingToDo,
+    completedToDo,
     addTask,
     onDeleteItem,
     onEditTask,

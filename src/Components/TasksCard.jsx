@@ -1,4 +1,5 @@
 import { BiEdit, BiTrash, BiSave } from "react-icons/bi";
+import { FcCancel } from "react-icons/fc";
 import { useState } from "react";
 import "../App.css";
 
@@ -61,32 +62,43 @@ export default function TasksCard(props) {
       setEditing(false);
     };
 
+    const handleCancelClick = (e) => {
+      e.preventDefault();
+    };
+
     return (
       <div className={getstyle()}>
-        <span className="edit">
-          Task
-          <input
-            className="inputEdit"
-            placeholder="Task"
-            type="text"
-            value={editTask}
-            onChange={handleEditTaskChange}
-          />
-        </span>
-
-        <span className="edit">
-          Description
-          <input
-            className="inputEdit"
-            type="text"
-            placeholder="Description"
-            value={editDescription}
-            onChange={handleEditDescriptionChange}
-          />
-        </span>
-        <span className="edit">
+        <div className="form-edit">
+          <span className="edit">
+            Task
+            <input
+              className="inputEdit"
+              placeholder="Task"
+              type="text"
+              value={editTask}
+              onChange={handleEditTaskChange}
+            />
+          </span>
+          <span className="edit">
+            Description
+            <input
+              className="inputEdit"
+              type="text"
+              placeholder="Description"
+              value={editDescription}
+              onChange={handleEditDescriptionChange}
+            />
+          </span>
+        </div>
+        <span>
           <button className="btn-task">
             <BiSave className="btn-save" onClick={handleSaveClick}></BiSave>
+          </button>
+          <button className="btn-task">
+            <FcCancel
+              className="btn-save"
+              onClick={() => setEditing(false)}
+            ></FcCancel>
           </button>
         </span>
       </div>

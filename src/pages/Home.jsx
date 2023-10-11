@@ -1,7 +1,9 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
 export default function Home() {
+  const color = useColorModeValue("black", "white");
+
   return (
     <Flex
       height="30vh"
@@ -10,7 +12,7 @@ export default function Home() {
       justifyContent={"center"}
       padding="0vh 0vh 0vh 37%"
     >
-      <Heading fontSize="10vh" color="black" fontWeight={"bold"}>
+      <Heading fontSize="10vh" color={color} fontWeight={"bold"}>
         Welcome!
       </Heading>
 

@@ -4,6 +4,7 @@ import TaskList from "../Components/TaskList";
 import TaskForm from "../Components/TaskForm";
 import Footer from "../Components/Footer";
 import { useToDo } from "../hooks/useToDo";
+import { Flex } from "@chakra-ui/react";
 
 function Tareas() {
   const {
@@ -18,21 +19,23 @@ function Tareas() {
   } = useToDo();
 
   return (
-    <div className="mainBox">
-      <Header />
-      <TaskForm addTask={addTask} />
-      <TaskList
-        list={list}
-        onCompleted={onCompleted}
-        onDeleteItem={onDeleteItem}
-        onEditTask={onEditTask}
-      />
-      <Footer
-        onDeleteList={onDeleteList}
-        pendingToDo={pendingToDo}
-        completedToDo={completedToDo}
-      />
-    </div>
+    <Flex alignItems={"center"} justifyContent={"center"}>
+      <div className="mainBox">
+        <Header />
+        <TaskForm addTask={addTask} />
+        <TaskList
+          list={list}
+          onCompleted={onCompleted}
+          onDeleteItem={onDeleteItem}
+          onEditTask={onEditTask}
+        />
+        <Footer
+          onDeleteList={onDeleteList}
+          pendingToDo={pendingToDo}
+          completedToDo={completedToDo}
+        />
+      </div>
+    </Flex>
   );
 }
 

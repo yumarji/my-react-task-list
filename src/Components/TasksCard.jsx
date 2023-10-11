@@ -2,7 +2,13 @@ import { BiEdit, BiTrash, BiSave } from "react-icons/bi";
 import { FcCancel } from "react-icons/fc";
 import { useState } from "react";
 import "../App.css";
-import { Box, Checkbox, Flex, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Checkbox,
+  Flex,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function TasksCard(props) {
   const {
@@ -14,6 +20,8 @@ export default function TasksCard(props) {
     onDeleteItem,
     onEditTask,
   } = props;
+
+  const color = useColorModeValue("black", "black");
 
   const [editing, setEditing] = useState(false);
 
@@ -116,7 +124,7 @@ export default function TasksCard(props) {
       <Box padding="0.3rem 0rem">
         <Flex direction={"row"} alignItems={"center"} justifyContent="center">
           <div className={getstyle()}>
-            <span>
+            <span className="spanTaskList">
               <input
                 type="checkbox"
                 checked={completed}

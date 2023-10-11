@@ -7,15 +7,23 @@ import {
   Heading,
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
+  Button,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 
 const Home = lazy(() => import("./Home"));
 const SobreNosotros = lazy(() => import("./SobreNosotros"));
 const Tareas = lazy(() => import("./Tareas"));
 
 export default function Menu() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  const bg = useColorModeValue("red.500", "red.200");
+  const color = useColorModeValue("white", "black");
+  const colormoon = useColorModeValue("black", "white");
+
   return (
     <Box>
       <Box
@@ -44,10 +52,10 @@ export default function Menu() {
           </Heading>
         </Flex>
       </Box>
-
       <Flex
         height="5vh"
         padding="4vh"
+        justifyContent="space-between"
         w={"100%"}
         fontSize="2.5vh"
         color="#C95D40"
@@ -63,6 +71,10 @@ export default function Menu() {
             <Link to="/Tareas">Task List</Link>
           </BreadcrumbItem>
         </Breadcrumb>
+
+        <BiSolidMoon size="30px" color={colormoon} onClick={toggleColorMode}>
+          Toggle {colorMode === "light" ? "Dark" : "Dark"}
+        </BiSolidMoon>
       </Flex>
 
       <div>

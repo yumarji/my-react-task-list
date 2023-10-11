@@ -34,7 +34,7 @@ export default function SobreNosotros() {
             correctamente.
           </Text>
           <Stack direction="row" justifyContent="space-around" padding="5vh">
-            <Text fontWeight="black">Tecnologias:</Text>
+            <Text fontWeight="black">Tecnologías usadas en el aplicativo:</Text>
             <Image boxSize="10vh" src={htmllogo} />
             <Image boxSize="10vh" src={Csslogo} />
             <Image boxSize="10vh" src={Jslogo} />

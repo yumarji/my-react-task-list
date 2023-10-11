@@ -8,6 +8,7 @@ import {
   Stack,
   Flex,
   Box,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 export default function TaskForm(props) {
@@ -19,6 +20,9 @@ export default function TaskForm(props) {
   const [formValidation, setFormValidation] = useState({
     taskName: undefined,
   });
+
+  const color = useColorModeValue("black", "White");
+  const bg = useColorModeValue("gray.200", "gray.500");
 
   const onSubmitForm = () => {
     addTask(taskName, taskDescription);
@@ -67,14 +71,18 @@ export default function TaskForm(props) {
           p="1rem 2rem 0rem 2rem"
           borderRadius={"6px"}
           color={"grey"}
-          width={"56vh"}
+          w={["100%"]}
         >
           <FormControl>
-            <FormLabel color="#C95D40">Task</FormLabel>
+            <FormLabel color="#C95D40" letterSpacing={"1.3px"}>
+              Task
+            </FormLabel>
             <Input
               type="text"
               value={taskName}
               onChange={handleTaskNameChange}
+              color={color}
+              bg={bg}
             />
           </FormControl>
           {formValidation.taskName && (
@@ -82,21 +90,25 @@ export default function TaskForm(props) {
           )}
 
           <FormControl>
-            <FormLabel color="#C95D40">Description</FormLabel>
+            <FormLabel color="#C95D40" letterSpacing={"1.3px"}>
+              Description
+            </FormLabel>
             <Input
               type="text"
               placeholder="Description (is not required)"
               value={taskDescription}
               onChange={handleTaskDescriptionChange}
+              color={color}
+              bg={bg}
             />
           </FormControl>
 
           <Stack spacing={4} align="center">
             <Button
-              color="white"
+              color="black"
               colorScheme="orange"
               variant="solid"
-              disabled={!isFormValid}
+              isDisabled={!isFormValid}
               onClick={onSubmitForm}
             >
               Add

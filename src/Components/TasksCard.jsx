@@ -2,6 +2,7 @@ import { BiEdit, BiTrash, BiSave } from "react-icons/bi";
 import { FcCancel } from "react-icons/fc";
 import { useState } from "react";
 import "../App.css";
+import { Box, Checkbox, Flex, Stack } from "@chakra-ui/react";
 
 export default function TasksCard(props) {
   const {
@@ -24,7 +25,7 @@ export default function TasksCard(props) {
     let newStyle = "";
 
     if (completed === true) {
-      newStyle = "taskCompleted";
+      newStyle = "boxTaskCompleted";
     } else {
       newStyle = "boxTask";
     }
@@ -67,70 +68,78 @@ export default function TasksCard(props) {
     };
 
     return (
-      <div className={getstyle()}>
-        <div className="form-edit">
-          <span className="edit">
-            Task
-            <input
-              className="inputEdit"
-              placeholder="Task"
-              type="text"
-              value={editTask}
-              onChange={handleEditTaskChange}
-            />
-          </span>
-          <span className="edit">
-            Description
-            <input
-              className="inputEdit"
-              type="text"
-              placeholder="Description"
-              value={editDescription}
-              onChange={handleEditDescriptionChange}
-            />
-          </span>
-        </div>
-        <span>
-          <button className="btn-task">
-            <BiSave className="btn-save" onClick={handleSaveClick}></BiSave>
-          </button>
-          <button className="btn-task">
-            <FcCancel
-              className="btn-save"
-              onClick={() => setEditing(false)}
-            ></FcCancel>
-          </button>
-        </span>
-      </div>
+      <Box padding="0.3rem 0rem">
+        <Flex direction={"row"} alignItems={"center"} justifyContent="center">
+          <div className={getstyle()}>
+            <div className="form-edit">
+              <span className="edit">
+                Task
+                <input
+                  className="inputEdit"
+                  placeholder="Task"
+                  type="text"
+                  value={editTask}
+                  onChange={handleEditTaskChange}
+                />
+              </span>
+              <span className="edit">
+                Description
+                <input
+                  className="inputEdit"
+                  type="text"
+                  placeholder="Description"
+                  value={editDescription}
+                  onChange={handleEditDescriptionChange}
+                />
+              </span>
+            </div>
+            <span>
+              <button className="btn-task">
+                <BiSave className="btn-save" onClick={handleSaveClick}></BiSave>
+              </button>
+              <button className="btn-task">
+                <FcCancel
+                  className="btn-save"
+                  onClick={() => setEditing(false)}
+                ></FcCancel>
+              </button>
+            </span>
+          </div>
+        </Flex>
+      </Box>
     );
   }
 
   //Modo visualización
   function EditionOff() {
     return (
-      <div className={getstyle()}>
-        <span>
-          <input
-            type="checkbox"
-            checked={completed}
-            onChange={handleCompletedChange}
-          ></input>
-          {name}
-          <br />
-          {description}
-        </span>
-        <span>
-          <button className="btn-task">
-            <BiEdit
-              className="btn-edit"
-              onClick={() => setEditing(true)}
-            ></BiEdit>
-          </button>
-          <button className="btn-task" onClick={() => onDeleteItem(id)}>
-            <BiTrash className="btn-delete"></BiTrash>
-          </button>
-        </span>
-      </div>
+      <Box padding="0.3rem 0rem">
+        <Flex direction={"row"} alignItems={"center"} justifyContent="center">
+          <div className={getstyle()}>
+            <span>
+              <input
+                type="checkbox"
+                checked={completed}
+                onChange={handleCompletedChange}
+              ></input>
+              {name}
+              <br />
+              {description}
+            </span>
+            <span>
+              <button className="btn-task">
+                <BiEdit
+                  className="btn-edit"
+                  onClick={() => setEditing(true)}
+                ></BiEdit>
+              </button>
+              <button className="btn-task" onClick={() => onDeleteItem(id)}>
+                <BiTrash className="btn-delete"></BiTrash>
+              </button>
+            </span>
+          </div>
+        </Flex>
+      </Box>
     );
   }
 

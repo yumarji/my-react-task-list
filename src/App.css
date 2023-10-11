@@ -1,124 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .container-menu {
   border-bottom: 1px solid gray;
-}
-.titleMenu {
-  color: rgb(14, 20, 134);
-  font-family: "Trebuchet MS";
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.container-nav {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.container-nav a {
-  padding: 4px 20px;
-  border-left: 2px solid gray;
-  border-right: 2px solid gray;
-}
-
-/*Home*/
-.titleHome {
-  color: rgb(119, 12, 12);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 4rem;
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-/*SobreNosotros.jsx*/
-.titleSobreNosotros {
-  color: rgb(14, 20, 134);
-  font-family: "Trebuchet MS";
-  font-size: 2rem;
-  display: flex;
-  margin-top: -3rem;
-}
-
-.textSobreNosotros {
-  color: rgb(4, 7, 66);
-  font-family: "Trebuchet MS";
-  font-size: 1rem;
-}
-
-.boxTecnologias {
-  display: flex;
-  border: 3px dotted gray;
-  border-radius: 5px;
-  width: 200px;
-  gap: 20px;
-  padding: 0.5rem;
-  margin-bottom: 15px;
-  font-style: italic;
-  align-items: center;
-  font-size: 1.2rem;
-}
-
-.logosTecnologias {
-  height: 50px;
-  width: 50px;
 }
 
 /*Tareas*/
 .mainBox {
-  border: 4px solid rgba(109, 107, 107, 0.918);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  position: relative;
-  width: auto;
-  margin-top: 30px;
-  padding: 1px 40px;
-}
-
-/*Task List - Header*/
-.head {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: -5px;
-  margin-bottom: -50px;
-}
-
-/*Task List - TaskForm*/
-.inputNew {
-  border-radius: 4px;
-  width: 345px;
-  height: 30px;
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: #dbd7d7;
-  border-color: #c6c5c5;
-  color: black;
-}
-.form2 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2rem;
-}
-
-.buttonAdd {
-  display: flex;
-  align-items: center;
-  background-color: rgba(5, 56, 143, 0.795);
-  border: none;
-  margin-left: 2rem;
-  color: rgb(242, 242, 245);
-  font-size: 15px;
-  height: 37px;
-  width: 60px;
+  border: 5px solid #786d6dc8;
+  margin: 1rem 45rem 0rem 45rem;
+  width: "40rem";
 }
 
 /*Task List - TaskCard*/
@@ -126,48 +17,50 @@
   width: 440px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(202, 208, 227);
+  align-items: center;
+  background-color: rgb(250, 211, 189);
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 3px;
-  margin-left: -40px;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   font-size: 1rem;
 }
 
-.taskCompleted {
+.boxTaskCompleted {
   text-decoration: line-through;
   width: 440px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(202, 208, 227);
+  align-items: center;
+  background-color: rgb(250, 211, 189);
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 3px;
-  margin-left: -40px;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   font-size: 1rem;
 }
 
 .btn-edit {
   color: rgba(17, 100, 243, 0.904);
+  width: 2rem;
   font-size: 1.3rem;
 }
 
 .btn-delete {
   color: rgb(207, 27, 27);
+  width: 2rem;
   font-size: 1.3rem;
 }
 
 .btn-save {
   color: rgb(8, 10, 8);
+  width: 2rem;
   font-size: 1.3rem;
 }
 
 .btn-task {
-  background-color: rgb(202, 208, 227);
+  background-color: rgb(250, 211, 189);
 }
 
 .form-edit {
   display: flex;
+  width: 2rem;
   flex-direction: column;
 }
 
@@ -214,26 +107,26 @@ button:disabled {
   background-color: #858282;
 }
 
-/*Footer*/
-
-.footer {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  font-size: 10px;
-  width: auto;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 0.9rem;
-}
-
-.msj-pending {
-  color: rgb(183, 25, 25);
-}
-
 /*Error 404*/
 .error-404 {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 5rem;
+  align-items: "center";
+  justify-content: "center";
+}
+
+.error {
+  display: block;
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+span.edit {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 3px;
+  width: fit-content;
 }

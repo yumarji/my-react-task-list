@@ -1,5 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import {
+  Input,
+  FormControl,
+  FormLabel,
+  Button,
+  Stack,
+  Flex,
+  Box,
+} from "@chakra-ui/react";
 
 export default function TaskForm(props) {
   const { addTask } = props;
@@ -10,10 +19,6 @@ export default function TaskForm(props) {
   const [formValidation, setFormValidation] = useState({
     taskName: undefined,
   });
-
-  const handleSubmitForm = (e) => {
-    e.preventDefault();
-  };
 
   const onSubmitForm = () => {
     addTask(taskName, taskDescription);
@@ -52,42 +57,53 @@ export default function TaskForm(props) {
   console.log("El formato es valido", isFormValid);
 
   return (
-    <div>
-      <form onSubmit={handleSubmitForm}>
-        <div>
-          <input
-            className="inputNew"
-            type="text"
-            placeholder="Task"
-            value={taskName}
-            onChange={handleTaskNameChange}
-          />
-          <br />
+    <Box padding="0rem 0rem 2rem 0rem">
+      <Flex
+        direction={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        <Stack
+          p="1rem 2rem 0rem 2rem"
+          borderRadius={"6px"}
+          color={"grey"}
+          width={"56vh"}
+        >
+          <FormControl>
+            <FormLabel color="#C95D40">Task</FormLabel>
+            <Input
+              type="text"
+              value={taskName}
+              onChange={handleTaskNameChange}
+            />
+          </FormControl>
           {formValidation.taskName && (
-            <span className="error" role="alert">
-              {formValidation.taskName}
-            </span>
+            <div className="error">{formValidation.taskName}</div>
           )}
-        </div>
 
-        <div className="form2">
-          <input
-            className="inputNew"
-            type="text"
-            placeholder="Description (is not required)"
-            value={taskDescription}
-            onChange={handleTaskDescriptionChange}
-          />
+          <FormControl>
+            <FormLabel color="#C95D40">Description</FormLabel>
+            <Input
+              type="text"
+              placeholder="Description (is not required)"
+              value={taskDescription}
+              onChange={handleTaskDescriptionChange}
+            />
+          </FormControl>
 
-          <button
-            className="buttonAdd"
-            disabled={!isFormValid}
-            onClick={onSubmitForm}
-          >
-            Add
-          </button>
-        </div>
-      </form>
-    </div>
+          <Stack spacing={4} align="center">
+            <Button
+              color="white"
+              colorScheme="orange"
+              variant="solid"
+              disabled={!isFormValid}
+              onClick={onSubmitForm}
+            >
+              Add
+            </Button>
+          </Stack>
+        </Stack>
+      </Flex>
+    </Box>
   );
 }

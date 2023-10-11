@@ -17,7 +17,7 @@ export default function Home() {
       </Heading>
 
       <Heading fontSize="8vh" color="#C95D40">
-        To Task Lists
+        to Task List
       </Heading>
     </Flex>
   );

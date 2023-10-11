@@ -2,13 +2,7 @@ import { BiEdit, BiTrash, BiSave } from "react-icons/bi";
 import { FcCancel } from "react-icons/fc";
 import { useState } from "react";
 import "../App.css";
-import {
-  Box,
-  Checkbox,
-  Flex,
-  Stack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 
 export default function TasksCard(props) {
   const {

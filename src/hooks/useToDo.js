@@ -31,13 +31,13 @@ export function useToDo() {
   const onDeleteItem = (id) => {
     swal({
       title: "Eliminar una tarea",
-      text: "¿Estás seguro que deseas borrar esta tarea?",
+      text: "¿Estás seguro que deseas eliminar esta tarea?",
       icon: "warning",
       buttons: ["No", "Si"],
     }).then((answer) => {
       if (answer) {
         swal({
-          text: "La tarea seleccionada se ha borrado con éxito.",
+          text: "La tarea seleccionada se ha eliminado con éxito.",
           icon: "success",
         });
         setList(list.filter((task) => task.id !== id));
@@ -72,13 +72,13 @@ export function useToDo() {
   const onDeleteList = () => {
     swal({
       title: "Eliminar",
-      text: "¿Estás seguro que deseas borrar la lista de tareas?",
+      text: "¿Estás seguro que deseas eliminar toda la lista de tareas?",
       icon: "warning",
       buttons: ["No", "Si"],
     }).then((answer) => {
       if (answer) {
         swal({
-          text: "La lista de tareas se ha borrado con éxito.",
+          text: "La lista de tareas se ha eliminado con éxito.",
           icon: "success",
         });
         setList([]);
